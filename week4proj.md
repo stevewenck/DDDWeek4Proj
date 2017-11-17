@@ -20,38 +20,29 @@ The law of large numbers can be a hard concept for new statistics students to co
 Law of Large Numbers Description
 ========================================================
 
-
 ```r
-## Create normal distributions with 10 & 100,000 observations
-norm1 <- rnorm(10)
-norm2 <- rnorm(100000)
-
-## Create uniform distributions with 10 & 100,000 observations
-unif1 <- runif(10)
-unif2 <- runif(100000)
-
 ## Prepare histogram plots of the normal and uniform distribution examples
 par(mfrow=c(2,2))
-hist(norm1, main="Normal distribution of 10 obs", xlab="Normal 10 obs")
-hist(norm2, main="Normal distribution of 100,000 obs", xlab="Normal 100,000 obs")
-hist(unif1, main="Uniform distribution of 10 obs", xlab="Uniform 10 obs")
-hist(unif2, main="Uniform distribution of 100,000 obs", xlab="Uniform 100,000 obs")
+hist(rnorm(10), main="Normal distribution of 10 obs", xlab="Normal 10 obs")
+hist(rnorm(100000), main="Normal distribution of 100,000 obs", xlab="Normal 100,000 obs")
+hist(runif(10), main="Uniform distribution of 10 obs", xlab="Uniform 10 obs")
+hist(runif(100000), main="Uniform distribution of 100,000 obs", xlab="Uniform 100,000 obs")
 ```
 
-As with the application I built, above I am showing the code that will demonstrate the law of large numbers. The application has four different types of distributions (normal, uniform, log normal, and exponential) and a range of observations from 10 to 25,000. The code above simulates what the application is doing - displaying histograms for varying number of obswervations for different distribtion types.
+The code above demonstrates the law of large numbers. Similarly, the app has four types of distributions (normal, uniform, log normal, & exponential) & observations range from 10 to 25,000. This code simulates what the app is doing - displaying histograms for varying number of observations for different distribtion types.
 
 Histograms Depicting Law of Large Numbers
 ========================================================
 
 ![plot of chunk unnamed-chunk-2](week4proj-figure/unnamed-chunk-2-1.png)
 
-This slide simulates what the user will see in the application - the more observations that are included in the distribution, the closer the distribution is to the expected distribution.
+This simulates what the user will see in the app - as more observations are included in the distribution, the closer the distribution mimics the expected distribution.
 
 Law of Large Numbers Demonstration Application
 ========================================================
 
 To help students understand how the law of large numbers works, my application takes input from the user in terms of number of observations and type of distribution and then creates a histogram with the input. Users of the app can see how increasingt he number of observations makes the selected distribution type look more like the expected distribution. Thus demonstrating the law of large numbers.
 
-- The application is hosted at: [linked phrase](http://example.com)
-- The application source code and this presentation are located in the following GitHub repository: [linked phrase](http://example.com)
+- The application is hosted at: [https://demographer.shinyapps.io/shinyapp/](https://demographer.shinyapps.io/shinyapp/)
+- The application source code and this presentation are located in the following GitHub repository: [https://github.com/stevewenck/DDPWeek4Proj](https://github.com/stevewenck/DDPWeek4Proj)
 
